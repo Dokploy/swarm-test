@@ -18,7 +18,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
   });
 
   app.get('/health', (req, res) => {
-    res.send(`OK`);
+     res.send(`Hello from instance ${instanceId}`);
   });
 
   app.listen(port, () => {
