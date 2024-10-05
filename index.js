@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.send(`Hello from instance ${instanceId}`);
 });
 
+app.get('/health', (req, res) => {
+  res.send(`Hello from instance ${instanceId}`);
+});
+
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
