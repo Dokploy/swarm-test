@@ -6,7 +6,7 @@ COPY . /app
 WORKDIR /app
 
 
-FROM base AS prod-deps
+FROM base AS prod-depss
 RUN pnpm install --prod --frozen-lockfile
 
 FROM base AS build
