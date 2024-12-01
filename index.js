@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const port = 3000
 
-
 // Generar un identificador único para esta instancia
 const instanceId = Math.random().toString(36).substring(7);
 app.get('/', (req, res) => {
