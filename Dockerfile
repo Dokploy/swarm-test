@@ -5,7 +5,6 @@ RUN corepack enable
 COPY . /app
 WORKDIR /app
 
-
 FROM base AS prod-deps
 RUN pnpm install --prod --frozen-lockfile
 
