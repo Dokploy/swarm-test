@@ -5,7 +5,7 @@ const port = 3000
 // Generar un identifcador único para esta instancia
 const instanceId = Math.random().toString(36).substring(7);
 app.get('/', (req, res) => {
-  res.send(`Hello from instance dockerfile2 ${instanceId}`);
+  res.send(`Hello from instance dockerfil2 ${instanceId}`);
 });
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
