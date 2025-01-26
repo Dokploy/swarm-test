@@ -1,14 +1,5 @@
 const express = require('express');
 const app = express();
-
-const port = 3000
-
-// Generar un identifcador único para esta instancia
-const instanceId = Math.random().toString(36).substring(7);
-app.get('/', (req, res) => {
-  res.send(`Hello from instance dockerfil222222222 ${instanceId}`);
-});
-
 const port = 3000;
 // Generar un identificador único para esta instancia
 const instanceId = Math.random().toString(36).substring(7);
@@ -20,13 +11,12 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
   // Definir las rutas después del delay
   app.get('/', (req, res) => {
-    res.send(`Hello from instance ${instanceId}`);
+    res.send(`Hello from instance222${instanceId}`);
   });
 
   app.get('/health', (req, res) => {
-     res.send(`Hello from instance ${instanceId}`);
+     res.send(`Hello from instance222 ${instanceId}`);
   });
-
 
   app.listen(port, () => {
     console.log(`App running on port ${port} after 5 seconds delay`);
