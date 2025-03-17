@@ -13,7 +13,6 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
   app.get('/', (req, res) => {
     res.send(`Hello from instance ${instanceId}`);
   });
-
   app.get('/health', (req, res) => {
      res.send(`Hello from instance ${instanceId}`);
   });
