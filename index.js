@@ -5,7 +5,7 @@ const port = 3000;
 const instanceId = Math.random().toString(36).substring(7);
 // Función para agregar un delay
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-// Iniciar con un delay de 5 segundo
+// Iniciar con un delay de 5 segund
 (async () => {
   await delay(5000); // Espera 5 segundos
   // Definir las rutas después del delay
