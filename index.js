@@ -10,10 +10,11 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
   await delay(5000); // Espera 5 segundos
   // Definir las rutas después del delay
   app.get('/', (req, res) => {
+
     res.send(`Hello from instance testing bug.... ${instanceId}`);
   });
   app.get('/health', (req, res) => {
-     res.send(`Hello from instance ${instanceId}`);
+     res.send(`Hello from instance222 ${instanceId}`);
   });
 
   app.listen(port, () => {
