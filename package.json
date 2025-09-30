@@ -8,6 +8,7 @@
     "start": "node index.js",
     "build": "echo \"No build script specified\""
   },
+  "packageManager": "pnpm@8.15.8",
   "dependencies": {
     "express": "^4.19.2"
   },
