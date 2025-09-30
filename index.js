@@ -8,7 +8,7 @@ const instanceId = Math.random().toString(36).substring(7);
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 // Iniciar con un delay d
 (async () => {
-  const startupDelayMs = env.STARTUP_DELAY ?? 5000;
+  const startupDelayMs = process.env.STARTUP_DELAY ?? 5000;
   await delay(startupDelayMs); // Espera 5 segundos
 
   // Definir las rutas después del delay
