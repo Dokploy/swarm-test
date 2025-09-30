@@ -5,6 +5,9 @@ RUN corepack enable
 COPY . /app
 WORKDIR /app
 
+## Install curl
+RUN apt-get update && apt-get install -y curl
+
 FROM base AS prod-deps
 RUN pnpm install --prod --frozen-lockfile
 
