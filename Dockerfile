@@ -5,8 +5,10 @@ RUN corepack enable
 COPY . /app
 WORKDIR /app
 
+## Install curl
+RUN apt-get update && apt-get install -y curl
 
-FROM base AS prod-depss
+FROM base AS prod-deps
 RUN pnpm install --prod --frozen-lockfile
 
 FROM base AS build
@@ -17,4 +19,3 @@ FROM base
 COPY --from=prod-deps /app/node_modules /app/node_modules
 EXPOSE 3000
 CMD [ "pnpm", "start" ]
-

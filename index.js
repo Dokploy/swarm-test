@@ -8,17 +8,19 @@ const instanceId = Math.random().toString(36).substring(7);
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 // Iniciar con un delay d
 (async () => {
-  await delay(5000); // Espera 5 segundos
+  const startupDelayMs = process.env.STARTUP_DELAY ?? 5000;
+  await delay(startupDelayMs); // Espera 5 segundos
+
   // Definir las rutas después del delay
   app.get('/', (req, res) => {
-
-    res.send(`Hello from instance testing bug.... ${instanceId}`);
+    res.send(`Hello from instance ${instanceId}`);
   });
+
   app.get('/health', (req, res) => {
-     res.send(`Hello from instance222 ${instanceId}`);
+     res.send(`Hello from instance ${instanceId}`);
   });
 
   app.listen(port, () => {
-    console.log(`App running on port ${port} after 5 seconds delay`);
+    console.log(`App running on port ${port} after ${startupDelayMs}ms delay`);
   });
 })();
